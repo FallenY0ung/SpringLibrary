@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+
+<body>
+<h1>Заведение карточки посетителя библиотеки</h1>
+<form th:method="POST" th:action="@{/people}" th:object="${person}">
+    <label for="name">Enter Full name: </label>
+    <input type="text" th:field="*{fullName}" id="name"/>
+    <div style="color:red" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}">Name error</div>
+    <br/>
+    <label for="age">Enter age of birth: </label>
+    <input type="text" th:field="*{ageOfBirthday}" id="age"/>
+    <div style="color:red" th:if="${#fields.hasErrors('ageOfBirthday')}" th:errors="*{ageOfBirthday}">Age error</div>
+
+    <br/>
+    <input type="submit" value="Создать карточку"/>
+</form>
+
+</body>
+</html>

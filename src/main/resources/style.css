@@ -1,0 +1,147 @@
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background: #f7f8fc;
+    color: #222;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    color: #1f2a44;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #dfe3eb;
+    margin: 20px 0;
+}
+
+/* ===== Layout containers ===== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Links ===== */
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Lists / cards ===== */
+.list-item {
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.list-item:hover {
+    background: #f0f4ff;
+}
+
+/* ===== Forms ===== */
+form {
+    margin: 12px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #374151;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    max-width: 420px;
+    padding: 10px 12px;
+    border: 1px solid #cfd6e4;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* ===== Buttons ===== */
+input[type="submit"],
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Secondary button */
+.btn-secondary {
+    background: #6b7280;
+}
+
+.btn-secondary:hover {
+    background: #4b5563;
+}
+
+/* Danger button */
+.btn-danger {
+    background: #dc2626;
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+}
+
+/* ===== Error messages ===== */
+.error {
+    color: #dc2626;
+    font-size: 13px;
+    margin: -4px 0 10px;
+}
+
+/* ===== Info blocks ===== */
+.note {
+    padding: 12px;
+    border-radius: 8px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1e3a8a;
+    margin: 10px 0;
+}
+
+.empty {
+    color: #6b7280;
+    font-style: italic;
+}

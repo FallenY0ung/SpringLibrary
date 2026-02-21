@@ -7,14 +7,30 @@
 <body>
 <h1>Карточка посетителя</h1>
 
-<p th:text="${person.getFullName() + ', ' + person.getAgeOfBirthday()}">VALUE</p>
+<p th:text="${person.fullName + ', ' + person.ageOfBirthday}">VALUE</p>
+<hr/>
 
-<br/>
+<span th:if="${!books.isEmpty()}"}>
+    <h3>Книги:</h3>
+
+<div th:each ="book : ${books}">
+
+    <p th:text="${book.name + ', ' + book.authorName + ', ' + book.age}"></p>
+
+</div>
+
+</span>
+<span th:if="${books.isEmpty()}">
+    <p>Человек еще не взял ни одной книги</p>
+</span>
+
 <hr/>
 <a th:href="@{/people/{id}/edit(id=${person.getId()})}">Изменить</a>
-<form th:method="DELETE" th:action="@{people/{id}(id=${person.getId()})}">
+<form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
     <input type ="submit" value="Удалить"/>
 
 </form>
+<br/>
+<a href="/people"> Назад</a>
 </body>
 </html>

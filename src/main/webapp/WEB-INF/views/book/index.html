@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Library</title>
+  <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+</head>
+<body>
+<h1>Список книг</h1>
+
+<div th:each ="book : ${shell}">
+
+  <a th:href="@{/book/{id}(id=${book.getId()})}" th:text="${book.getName()+ ', ' + book.getAuthorName() +', ' + book.getAge()}">book</a>
+
+</div>
+<br/>
+<hr/>
+<a href="/book/create"> Добавить новую книгу</a>
+<br/>
+<a href="/hello"> В меню</a>
+</body>
+</html>

@@ -5,9 +5,13 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class Person {
     private int id;
+
 
     public int getId() {
         return id;
@@ -46,5 +50,6 @@ public class Person {
         this.id = id;
         this.fullName = fullName;
         this.ageOfBirthday = ageOfBirthday;
+
     }
 }
